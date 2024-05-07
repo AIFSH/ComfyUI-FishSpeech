@@ -23,6 +23,8 @@ pip install -r requirements.txt
 `weights` will be downloaded from huggingface automatically! if you in china,make sure your internet attach the huggingface
 or if you still struggle with huggingface, you may try follow [hf-mirror](https://hf-mirror.com/) to config your env.
 
+[This repository is publicly accessible, but you have to accept the conditions to access its files and content.](https://huggingface.co/fishaudio/fish-speech-1)
+
 you may meet 
 ```
 ubprocess.CalledProcessError: Command '['cmake', '/tmp/pip-install-y_5f2bue/samplerate_578130ccaceb41abb26587e96f64988e', '-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/tmp/pip-install-y_5f2bue/samplerate_578130ccaceb41abb26587e96f64988e/build/lib.linux-x86_64-cpython-310/', '-DPYTHON_EXECUTABLE=/usr/local/miniconda3/bin/python', '-DCMAKE_BUILD_TYPE=Release', '-DPACKAGE_VERSION_INFO=0.2.1']' returned non-zero exit status 1.
@@ -42,7 +44,7 @@ if
 please update your `torch`
 
 ## Tutorial
-todo
+[Demo](https://www.bilibili.com/video/BV1Tx4y1B7zE/)
 
 ## Thanks
 - [fish-speech](https://github.com/fishaudio/fish-speech.git)
