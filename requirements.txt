@@ -19,3 +19,5 @@ vector_quantize_pytorch>=1.14.7
 resampy>=0.4.3
 einx[torch]==0.2.2
 srt
+pydub
+audiotsm
