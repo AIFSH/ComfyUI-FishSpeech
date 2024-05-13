@@ -65,7 +65,7 @@ def load_model(config_name, checkpoint_path, device="cuda"):
 def main(input_path, output_path, config_name, checkpoint_path, device):
     model = load_model(config_name, checkpoint_path, device=device)
 
-    if input_path.suffix in AUDIO_EXTENSIONS:
+    if input_path.suffix.lower() in AUDIO_EXTENSIONS:
         logger.info(f"Processing in-place reconstruction of {input_path}")
 
         # Load audio

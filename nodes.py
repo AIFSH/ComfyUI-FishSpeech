@@ -219,7 +219,7 @@ class FishSpeech_INFER:
             "prompt_audio": ("AUDIO",),
             "text":("STRING",{
                 "multiline": True,
-                "default": "你好，世界！"
+                "default": "你好啊，世界！"
             }),
             "prompt_text_by_srt":("SRT",{
                 "multiline": True,
@@ -296,12 +296,14 @@ class FishSpeech_INFER:
             hf_hub_download(repo_id="fishaudio/fish-speech-1",filename="tokenizer_config.json",local_dir=checkpoint_path,token=hf_token)
             hf_hub_download(repo_id="fishaudio/fish-speech-1",filename="special_tokens_map.json",local_dir=checkpoint_path,token=hf_token)
         
-        npy_path = os.path.join(fish_tmp_out, os.path.basename(prompt_audio))
         python_exec = sys.executable or "python"
+        
+        npy_path = os.path.join(fish_tmp_out, os.path.basename(prompt_audio))
         step_1 = f"{python_exec} {parent_directory}/tools/vqgan/inference.py -i {prompt_audio} -o {npy_path} -ckpt {vq_model_path} -d {device}"
         print("step 1 ",step_1)
         p = Popen(step_1,shell=True)
         p.wait()
+        
         
         config_name = f"dual_ar_2_codebook_{text2semantic_type}"
         npy_path = os.path.join(fish_tmp_out, os.path.basename(prompt_audio)[:-4]+".npy")

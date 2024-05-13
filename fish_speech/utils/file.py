@@ -9,7 +9,6 @@ from natsort import natsorted
 AUDIO_EXTENSIONS = {
     ".mp3",
     ".wav",
-    ".WAV",
     ".flac",
     ".ogg",
     ".m4a",
